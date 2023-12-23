@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hang Out Invitation</title>
+  <style>
+    /* Styling for the buttons */
+    .btn {
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #noButton {
+      position: absolute; /* This allows the button to be positioned freely */
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey, would you like to hang out?</h1>
+  <button class="btn" onclick="alert('Great! Looking forward to it.')">Yes</button>
+  <button id="noButton" class="btn" onclick="moveButton()">No</button>
+
+  <script>
+    function moveButton() {
+      var button = document.getElementById('noButton');
+      button.style.left = Math.random() * (window.innerWidth - button.offsetWidth) + 'px';
+      button.style.top = Math.random() * (window.innerHeight - button.offsetHeight) + 'px';
+    }
+  </script>
+</body>
+</html> 
